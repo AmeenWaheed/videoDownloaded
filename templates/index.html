@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+
+  <!-- Css File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/all.min.css')}}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Start Header -->
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <i class="fa-brands fa-youtube"></i>
+        <span>Yt.Downloader</span>
+      </div>
+      <div class="links">
+        <ul>
+          <li class="item-link">Home</li>
+          <li class="item-link">About</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+
+  <!-- Start Box -->
+  <div class="box">
+    <div class="container">
+      <h3>What My Application Does:</h3>
+      <p>
+        This application allows you to download YouTube videos. You can download a single video by providing its URL,
+        or you can download entire playlists by entering the playlist URL. Choose the desired resolution for the video
+        downloads, and the application will handle the rest!
+      </p>
+    </div>
+    
+  </div>
+
+  <!-- End Box -->
+
+  <!-- Start Project -->
+  <div class="form" id="form">
+    <div class="container">
+      <div class="field">
+        <div>
+          <input type="url" name="video-link" id="video-link" required placeholder="Enter Youtube URL">
+        </div>
+        <div>
+          <button id="btn"><i class="fa-brands fa-youtube"></i></button>
+        </div>
+      </div>
+      
+      <div id="resolutions" class="resolutions">
+        <h3 class="select">Select Resolution: </h3>
+        <select name="res" id="res">
+          <option value="highest">Highest</option>
+          <option value="720p">720p</option>
+          <option value="360p">360p</option>
+        </select>
+      </div>
+      
+      <div class="videos-information">
+      
+      </div>
+      
+    </div>
+
+  </div>
+  <!-- End Project -->
+
+  <!-- Strat Footer -->
+  <div class="footer">
+    <div class="conrtainer">
+      <p>Design By <span>Mano!</span>&copy;<span>2024</span></p>
+    </div>
+  </div>
+  <!-- End Footer -->
+  
+  <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>
