@@ -19,7 +19,7 @@ btn.addEventListener('click', function () {
 
 function getDataVideo(url) {
   let enco = encodeURIComponent(url)
-  fetch(`http://127.0.0.1:9000/download/video?url=${enco}&resolution=${res.value}`, {
+  fetch(`http://0.0.0.0:5000/download/video?url=${enco}&resolution=${res.value}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function getDataVideo(url) {
 function getPlayList(url) {
 
   let enco = encodeURIComponent(url)
-  fetch(`http://127.0.0.1:9000/download/play_list?url=${enco}&resolution=${res.value}`, {
+  fetch(`http://0.0.0.0:5000/download/play_list?url=${enco}&resolution=${res.value}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
